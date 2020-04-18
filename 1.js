@@ -36,6 +36,7 @@ const profile = (name = 'Bilkis Ismail', age = 18) => {
             wordpress: "advanced",
             javascript: "advanced",
             jquery: "advanced",
+            git: "beginner",
             mysql: "beginner",
             react: "beginner",
             linux: "beginner"
@@ -46,5 +47,5 @@ const profile = (name = 'Bilkis Ismail', age = 18) => {
     return JSON.stringify(jsonData);
 };
 
-const runProfile = profile('Bilkis Ismail', '18');
-console.log(runProfile);
+const run = profile('Bilkis Ismail', '18');
+console.log(run);
