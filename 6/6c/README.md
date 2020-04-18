@@ -27,6 +27,6 @@ DB_DRIVER=mysqli
 ```
 
 ## Preview
-![Screenshot](https://raw.githubusercontent.com/kubil-ismail/arkademy_test_2/dev/6/6c/screenshot/animate.gif?token=ALYTHXZYRBGYRBGGPYHPHQS6TMGEW)
+![Screenshot](https://i.ibb.co/q9DLqGN/animate.gif)
 
 
