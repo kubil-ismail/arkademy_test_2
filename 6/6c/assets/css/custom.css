@@ -1,0 +1,89 @@
+/* 
+=============================
+NAVBAR
+=============================
+*/
+.nav-form::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+.form-inline .form-control {
+    background-color: #CECECE;
+}
+
+.nav-form {
+    display: block !important;
+}
+
+@media (min-width: 1025px) {
+    .form-inline {
+        width: 70%;
+    }
+}
+
+/* 
+=============================
+BUTTON
+=============================
+*/
+.btn-warning {
+    background-color: #FADC9C;
+    border-color: #FADC9C;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #FADC9C;
+    border-color: #FADC9C;
+}
+
+.fa-bars {
+    color: #002b5e;
+}
+
+.fa-pencil-square-o {
+    color: #8bca59;
+}
+.fa-trash-o {
+    color: #e46c65;
+}
+
+@media (min-width: 1025px) {    
+    .btn-warning {
+        width: 15%;
+    }
+}
+
+
+/* 
+=============================
+TABLE
+=============================
+*/
+.table-warning {
+    background-color: #FADC9C !important;
+}
+
+.rounded-table {
+    border-radius: 15px !important;
+}
+
+table {
+  overflow: hidden;
+}
+
+thead th {
+    color: white;
+}
+.dataTables_filter {
+    display: none;
+}
+.page-link {
+    color: black !important;
+}
+.page-item.active .page-link {
+    color: white !important;
+    background-color:#FADC9C !important;
+    border-color:#FADC9C !important;
+}
