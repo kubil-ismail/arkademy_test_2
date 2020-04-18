@@ -19,6 +19,12 @@
     <link rel="stylesheet" href="<?= asset_url() . 'vendor/bootstrap/css/bootstrap.min.css' ?>">
     <link rel="stylesheet" href="<?= asset_url() . 'css/animate.min.css' ?>">
 
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="<?= asset_url() . 'css/custom.css' ?>">
+
+    <!-- Use Fontawesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Jquery JS -->
     <script src="<?= asset_url() . 'vendor/jquery/jquery-3.4.1.min.js' ?>"></script>
 

@@ -1,12 +1,106 @@
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 
 <body>
-    <div class="container mt-5 animated slideInLeft">
-        <div class="jumbotron">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a class="btn btn-primary btn-lg" href="<?= base_url('table') ?>" role="button">Learn more</a>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-white bg-shite shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="<?= asset_url() . 'img/logo.png' ?>" alt="Logo" width="100">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <form class="form-inline my-2 mx-auto">
+                        <input class="form-control mr-sm-2 w-100 nav-form dataTables_filter" type="search" placeholder="Search..." aria-label="Search">
+                    </form>
+                    <button class="btn btn-warning my-2 my-sm-0 shadow-sm" type="submit" data-toggle="modal" data-target="#addModal">ADD</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="content my-5">
+            <div class="container table-responsive">
+                <!-- Use table -->
+                <?php
+                table($table_title, $table_key, $table_data);
+                ?>
+            </div>
+        </section>
+    </main>
+
+    <!-- ADD MODAL -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title font-weight-bold" id="addModalLabel">ADD</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-danger">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <select class="form-control" id="Cashier">
+                                <option disabled selected>-- Pilih Kasir --</option>
+                                <option>Raisa Andriana</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="Category">
+                                <option disabled selected>-- Pilih Kategori --</option>
+                                <option>Drink</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="produk" placeholder="Nama Produk ...">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="harga" placeholder="Harga Produk ...">
+                        </div>
+                        <button type="button" class="btn btn-warning shadow-sm float-right">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Edit MODAL -->
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title font-weight-bold" id="editModalLabel">Edit</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-danger">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <select class="form-control" id="cashierInput">
+                                <option disabled>-- Pilih Kasir --</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="categoryInput">
+                                <option disabled>-- Pilih Kategori --</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="produkInput" placeholder="Nama Produk ...">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="priceInput" placeholder="Harga Produk ...">
+                        </div>
+                        <button type="button" class="btn btn-warning shadow-sm float-right">Edit</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>

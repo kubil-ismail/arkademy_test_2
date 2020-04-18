@@ -18,4 +18,5 @@ $route['table'] = 'controller/table';
 */ 
 
 // EXAMPLE
-// $route['profile/(:num)'] = 'controller/profile/$1';
+$route['search'] = 'controller/search';
+$route['delete'] = 'controller/delete';

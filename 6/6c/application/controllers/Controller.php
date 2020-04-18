@@ -8,24 +8,24 @@ class Controller extends CI_Controller
      *
      */
 
-    // var $API = "";
-
     public function __construct()
     {
         parent::__construct();
 
-        // $this->API = getenv('APP_REST_URL');
+        $this->load->model('ProductModel');
     }
 
 
     //  Index Page
     public function index()
     {
-        // Use notif
-        notif('success', 'Welcome to kubicode', 'This is the message from Home/index');
-
         // Data for send to view
-        $data['title'] = 'Home | Kubi Code';
+        $data['title'] = 'Home | Kubi Code';  
+        
+        // Use table function
+        $data['table_title'] = 'data_table';
+        $data['table_key'] = ['No', 'Cashier', 'Product', 'Category', 'Price', 'Action'];
+        $data['table_data'] = $this->ProductModel->getProduct();
 
         // Load view
         $this->load->view('layouts/header', $data);
@@ -33,21 +33,18 @@ class Controller extends CI_Controller
         $this->load->view('layouts/footer');
     }
 
-    // Display Table
-    public function table()
+    // Return search value
+    public function search()
     {
-        // Data for send to view
-        $data['title'] = 'Table | Kubi Code';
+        header('Content-Type: application/json');
+        echo json_encode($this->ProductModel->getProduct($_GET['query']));
+    }
 
-        // Use table function
-        $data['table_title'] = 'data_table';
-        $data['table_key'] = ['ID', 'Category Name', 'Product Name', 'Cashier Name'];
-        $data['table_data'] = $this->db->get('product')->result_array();
-
-        // Load view
-        $this->load->view('layouts/header', $data);
-        $this->load->view('home/tables');
-        $this->load->view('layouts/footer');
+    // Delete Data
+    public function delete()
+    {
+        header('Content-Type: application/json');
+        echo json_encode($this->ProductModel->deleteProduct($_GET['id']));
     }
 
     // 404 Not Found
