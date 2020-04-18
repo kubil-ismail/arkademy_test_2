@@ -102,10 +102,10 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="produkInput" placeholder="Nama Produk ...">
+                            <input type="text" class="form-control" id="produkInput" placeholder="Nama Produk ..." required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="priceInput" placeholder="Harga Produk ...">
+                            <input type="text" class="form-control" id="priceInput" placeholder="Harga Produk ..." required>
                         </div>
                         <button type="button" class="btn btn-warning shadow-sm float-right btn-edit">Edit</button>
                     </form>
