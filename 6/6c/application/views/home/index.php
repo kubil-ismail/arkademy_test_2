@@ -3,7 +3,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-white bg-shite shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-white bg-shite shadow-sm animated fadeInDown">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="<?= asset_url() . 'img/logo.png' ?>" alt="Logo" width="100">
@@ -22,7 +22,7 @@
     </header>
 
     <main>
-        <section class="content my-5">
+        <section class="content my-5 animated fadeIn">
             <div class="container table-responsive">
                 <!-- Use table -->
                 <?php
