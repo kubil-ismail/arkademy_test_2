@@ -26,7 +26,7 @@ function setMatrix(limit) {
     }
 
     console.log(matrix);
-    console.log(val1 + val2);
+    console.log(`Total : ${val1 + val2}`);
 }
 
 setMatrix(3);
