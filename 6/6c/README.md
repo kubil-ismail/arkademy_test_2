@@ -26,3 +26,7 @@ DB_DATABASE=
 DB_DRIVER=mysqli
 ```
 
+## Preview
+![Screenshot](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
+
