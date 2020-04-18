@@ -19,4 +19,6 @@ $route['table'] = 'controller/table';
 
 // EXAMPLE
 $route['search'] = 'controller/search';
+$route['insert'] = 'controller/insert';
+$route['update'] = 'controller/update';
 $route['delete'] = 'controller/delete';

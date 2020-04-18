@@ -15,13 +15,13 @@
                 <td><?= $value['cashier_name'] ?></td>
                 <td><?= $value['product_name'] ?></td>
                 <td><?= $value['category_name'] ?></td>
-                <td><?= $value['product_price'] ?></td>
+                <td>Rp <?= $value['product_price'] ?></td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#editModal">
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#editModal" data-product="<?= $value['product_name'] ?>" data-price="<?= $value['product_price'] ?>" data-id="<?= $value['id'] ?>">
                             <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
                         </button>
-                        <button type="button" class="btn btn-link delete-btn" data-id="<?= $value['id'] ?>">
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#deleteModal" data-id="<?= $value['id'] ?>">
                             <i class="fa fa-trash-o fa-2x" aria-hidden="true"></i>
                         </button>
                     </div>

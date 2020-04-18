@@ -13,6 +13,8 @@ class Controller extends CI_Controller
         parent::__construct();
 
         $this->load->model('ProductModel');
+        $this->load->model('CategoryModel');
+        $this->load->model('CashierModel');
     }
 
 
@@ -20,8 +22,10 @@ class Controller extends CI_Controller
     public function index()
     {
         // Data for send to view
-        $data['title'] = 'Home | Kubi Code';  
-        
+        $data['title'] = 'Home | Kubi Code';
+        $data['category'] = $this->CategoryModel->getCategory();
+        $data['cashier'] = $this->CashierModel->getCashier();  
+
         // Use table function
         $data['table_title'] = 'data_table';
         $data['table_key'] = ['No', 'Cashier', 'Product', 'Category', 'Price', 'Action'];
@@ -38,6 +42,20 @@ class Controller extends CI_Controller
     {
         header('Content-Type: application/json');
         echo json_encode($this->ProductModel->getProduct($_GET['query']));
+    }
+
+    // Add Data
+    public function insert()
+    {
+        header('Content-Type: application/json');
+        echo json_encode($this->ProductModel->insertProduct($_GET));
+    }
+
+    // Edit Data
+    public function update()
+    {
+        header('Content-Type: application/json');
+        echo json_encode($this->ProductModel->updateProduct($_GET));
     }
 
     // Delete Data

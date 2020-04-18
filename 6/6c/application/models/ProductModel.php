@@ -24,11 +24,45 @@ class ProductModel extends CI_Model
         return $result;
     }
 
+    public function insertProduct($val)
+    {
+        $data = [
+            'name' => $val['name'],
+            'price' => $val['price'],
+            'id_cashier' => $val['id_cashier'],
+            'id_category' => $val['id_category']
+        ];
+
+        $this->db->insert('product', $data);
+
+        $result['status'] = true;
+        $result['data'] = $this->getProduct();
+        return $result;
+    }
+
+    public function updateProduct($val) {
+        $data = [
+            'name' => $val['name'],
+            'price' => $val['price'], 
+            'id_cashier' => $val['id_cashier'], 
+            'id_category' => $val['id_category'] 
+        ];
+
+        $this->db->where('id',$val['id']);
+        $this->db->update('product', $data);
+
+        $result['status'] = true;
+        $result['data'] = $this->getProduct();
+        return $result;
+    }
+
     public function deleteProduct(INT $id)
     {
         $this->db->where('id', $id);
-        $result = $this->db->delete('product');
-        
+        $this->db->delete('product');
+
+        $result['status'] = true;
+        $result['data'] = $this->getProduct();        
         return $result;
     }
 }
