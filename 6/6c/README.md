@@ -26,6 +26,8 @@ DB_DATABASE=
 DB_DRIVER=mysqli
 ```
 
+add (/) in last APP_URL
+
 ## Preview
 ![Screenshot](https://i.ibb.co/q9DLqGN/animate.gif)
 
