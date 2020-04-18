@@ -1,6 +1,6 @@
 ## DB structure
-![Screenshot](https://raw.githubusercontent.com/kubil-ismail/arkademy_test_2/dev/6/6a/ss_db.png?token=ALYTHX2OQBNARVDN2NITNTS6TMGWK)
+![Screenshot](https://i.ibb.co/KzW8VYV/ss-db.png)
 
 ## DB Join
-![Screenshot](https://raw.githubusercontent.com/kubil-ismail/arkademy_test_2/dev/6/6a/ss_result.png?token=ALYTHX7HZMA55KDE6HZBU426TMGYA)
+![Screenshot](https://i.ibb.co/7XKVBTv/ss-result.png)
 
