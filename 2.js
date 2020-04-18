@@ -16,4 +16,4 @@ const runUsername = usernameCheck("@koders");
 const runPassword = passwordCheck("212223");
 // const runPassword = passwordCheck("2!2a3B");
 
-console.log(`Username Check = ${usernameRun} and Password Check = ${passwordRun}`);
+console.log(`Username Check = ${runUsername} and Password Check = ${runPassword}`);
