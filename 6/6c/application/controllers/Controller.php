@@ -22,7 +22,7 @@ class Controller extends CI_Controller
     public function index()
     {
         // Data for send to view
-        $data['title'] = 'Home | Kubi Code';
+        $data['title'] = 'Home | Arkademy Test';
         $data['category'] = $this->CategoryModel->getCategory();
         $data['cashier'] = $this->CashierModel->getCashier();  
 

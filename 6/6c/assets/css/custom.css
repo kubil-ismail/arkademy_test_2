@@ -12,6 +12,10 @@ NAVBAR
     background-color: #CECECE;
 }
 
+.nav-form {
+    display: block !important;
+}
+
 @media (min-width: 1025px) {
     .form-inline {
         width: 70%;
