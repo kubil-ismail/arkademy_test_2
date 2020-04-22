@@ -6,7 +6,7 @@ const usernameCheck = (input) => {
 
 const passwordCheck = (input) => {
     // At least 6 characters, only number
-    var regex = /^[0-9]{6,6}$/;
+    let regex = /^[0-9]{6,6}$/;
     return regex.test(input);
 };
 
