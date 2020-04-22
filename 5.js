@@ -1,5 +1,5 @@
 let random = [];
-var matrix = [];
+let matrix = [];
 let val1 = 0;
 let val2 = 0;
 
